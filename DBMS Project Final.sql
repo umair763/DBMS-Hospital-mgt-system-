@@ -92,7 +92,7 @@ CREATE TABLE MedicalStaff (
 	CreatedBy VARCHAR(50),
 	ModifiedDate DATE NULL,
 	ModifiedBy VARCHAR(50) NULL	,
-    FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
+    FOREIGN KEY (StaffID) REFERENCES Staff(StaffID), 
 );
 
 -- Insert data into Subtype Table 1 (MedicalStaff)
@@ -1127,12 +1127,3 @@ values
 	  ('Atif', 'Rafique', '2023-11-25', 'Muhammad Umair', NULL, NULL);
 
 select * from dummyTable;
-
---drop table dummyTable;
-
-update dummyTable
-set
-	ModifiedDate = '2023-11-28',
-	ModifiedBy = 'Muhammad Umair'
-where ID in (1,2,3);
-
